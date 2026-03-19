@@ -2,7 +2,6 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { Icon } from 'astro-icon/components';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -18,9 +17,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       <p>My links and contact details, including CV, are accessible below:</p>
 
       <ul>
-        <li>Email: <Icon name="mdi:email" width={36} height={36} aria-hidden="true" /> <a href="mailto:steveb1701@outlook.com">steveb1701@outlook.com</a></li>
-        <li>GitHub: <Icon name="simple-icons:github" width={36} height={36} aria-hidden="true" /> <a href="https://github.com/StevenBrennan01">github.com/StevenBrennan01</a></li>
-        <li>LinkedIn: <Icon name="mdi:linkedin" width={36} height={36} aria-hidden="true" /> <a href="https://www.linkedin.com/in/steven-brennan-37b473234/">Steven Brennan - LinkedIn</a></li>
+        <li>Email: <a href="mailto:steveb1701@outlook.com">steveb1701@outlook.com</a></li>
+        <li>GitHub: <a href="https://github.com/StevenBrennan01">github.com/StevenBrennan01</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/steven-brennan-37b473234/">Steven Brennan - LinkedIn</a></li>
+        <li>CV: <a href="/Steven_Brennan_CV.pdf"> Steven_Brennan_CV</a></li>
       </ul>
     </main>
     <Footer />
