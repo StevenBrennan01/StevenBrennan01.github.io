@@ -1,0 +1,36 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Projects | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main id="main" style="max-width: 1000px; margin: 0 auto; padding: 2rem 1rem;">
+      <h1>Projects</h1>
+      <p>Here are a few things I’ve worked on.</p>
+
+      <!-- Replace these with your real projects -->
+      <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <article style="border: 1px solid var(--border, #333); border-radius: 12px; padding: 1rem;">
+          <h2 style="margin-top: 0;">Project Name</h2>
+          <p>Short description…</p>
+          <p><a href="#" rel="noopener">View</a></p>
+        </article>
+
+        <article style="border: 1px solid var(--border, #333); border-radius: 12px; padding: 1rem;">
+          <h2 style="margin-top: 0;">Another Project</h2>
+          <p>Short description…</p>
+          <p><a href="#" rel="noopener">View</a></p>
+        </article>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

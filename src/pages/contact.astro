@@ -1,0 +1,27 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Contact | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main id="main" style="max-width: 900px; margin: 0 auto; padding: 2rem 1rem;">
+      <h1>Contact</h1>
+      <p>Best ways to reach me:</p>
+
+      <ul>
+        <li>Email: <a href="mailto:steveb1701@outlook.com">steveb1701@outlook.com</a></li>
+        <li>GitHub: <a href="https://github.com/StevenBrennan01">github.com/StevenBrennan01</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/steven-brennan-37b473234/">https://www.linkedin.com/in/steven-brennan-37b473234/</a></li>
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>
