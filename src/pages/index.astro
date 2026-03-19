@@ -13,15 +13,29 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main">
-		<section class="sb-hero">
-			<div class="sb-heroRow">
-			<img class="sb-avatar" src="/me.png" alt="Portrait of Steven Brennan" width="240" height="240" />
-			<div>
-				<h1 class="sb-name">Steven Brennan</h1>
+			<section class="sb-hero" aria-labelledby="sb-hero-title">
+			<video
+				class="sb-heroVideo"
+				autoplay
+				muted
+				loop
+				playsinline
+				preload="metadata"
+				aria-hidden="true"
+			>
+				<source src="/TankPlaceholder.mp4" type="video/mp4" />
+			</video>
+
+			<div class="sb-heroOverlay" aria-hidden="true"></div>
+
+			<div class="sb-heroContent">
+				<img class="sb-avatar" src="/me.png" alt="Portrait of Steven Brennan" width="240" height="240" />
+				<div>
+				<h1 id="sb-hero-title" class="sb-name">Steven Brennan</h1>
 				<h2 class="sb-role">BSc (Hons) Games Design and Programming Student</h2>
+				</div>
 			</div>
-			</div>
-		</section>
+			</section>
 			<p> 
 				Hi, I'm <strong><a href="https://www.linkedin.com/in/steven-brennan-37b473234/" target="_blank" rel="noopener noreferrer">Steve</a></strong>, a recent graduate from the University of Staffordshire for Games Design and Programming. I primarily work within the Unity engine using C#, with additional experience including Unreal (Blueprints), C++ using the SFML library and I'm currently exploring and learning within the S&box engine (Facepunch) through personal projects.
 			</p>
@@ -48,28 +62,95 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</main>
 
 			<style>
-			.sb-heroRow {
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				margin-top: 1.5rem;
+			/* Hero container */
+			.sb-hero {
+			position: relative;
+			overflow: hidden;
+
+			margin-top: 1.5rem;
+			padding: 2rem 1.5rem;
+			border-radius: 16px;
+
+			/* Optional: gives it a subtle card feel */
+			border: 1px solid var(--border-color);
+			background: var(--content-bg, transparent);
+
+			min-height: 320px;
 			}
 
-			/* This is the key anti-float / anti-weird-flow guard */
+			/* Background video */
+			.sb-heroVideo {
+			position: absolute;
+			inset: 0;
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			/* The “blurred background” effect */
+			filter: blur(12px) brightness(0.65) saturate(1.15);
+			transform: scale(1.08); /* avoids blurred edges showing */
+			}
+
+			/* Dark overlay for readability (tune opacity to taste) */
+			.sb-heroOverlay {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				90deg,
+				rgba(0, 0, 0, 0.65),
+				rgba(0, 0, 0, 0.25)
+			);
+			}
+
+			/* Foreground content */
+			.sb-heroContent {
+			position: relative;
+			z-index: 1;
+
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			}
+
+			/* Avatar */
 			.sb-avatar {
-				display: block;
-				float: none;
-				width: 240px;
-				height: 240px;
-				object-fit: cover;
-				flex: 0 0 auto;
+			display: block;
+			float: none;
+
+			width: 240px;
+			height: 240px;
+			object-fit: cover;
+			flex: 0 0 auto;
 			}
 
-			.sb-name { margin: 0; }
+			/* Text */
+			.sb-name {
+			margin: 0;
+			}
+
 			.sb-role {
-				margin: 0.25rem 0 0 0;
-				opacity: 0.85;
-				font-weight: 500;
+			margin: 0.25rem 0 0 0;
+			opacity: 0.9;
+			font-weight: 500;
+			}
+
+			/* Mobile layout: stack nicely */
+			@media (max-width: 720px) {
+			.sb-hero {
+				padding: 1.5rem 1rem;
+				min-height: 360px;
+			}
+
+			.sb-heroContent {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.sb-avatar {
+				width: 160px;
+				height: 160px;
+			}
 			}
 			</style>
 
