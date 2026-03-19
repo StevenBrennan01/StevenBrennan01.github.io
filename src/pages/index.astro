@@ -43,21 +43,21 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<p>
 				I am <strong>actively</strong> seeking junior gameplay programming roles (or adjacent positions), and open to relocation. Feel free to check out some of my <a href="https://stevenbrennandev.com/projects/" target="_blank" rel="noopener noreferrer">projects</a> both University and Personal.
 			</p>
-			<ul>
-				<li>✅ <strong>Astro v6</strong> - Built with the latest Astro features</li>
-				<li>✅ <strong>Dark Mode</strong> - Toggle between light and dark themes</li>
-				<li>✅ <strong>Tag System</strong> - Organize posts by tags with dedicated tag pages</li>
-				<li>✅ <strong>Responsive Design</strong> - Mobile-first with hamburger navigation</li>
-				<li>✅ <strong>Content Collections</strong> - Type-safe blog posts with Zod validation</li>
-				<li>✅ <strong>SEO Optimized</strong> - Canonical URLs, OpenGraph data, and sitemap</li>
-				<li>✅ <strong>RSS Feed</strong> - Auto-generated RSS feed for subscribers</li>
-				<li>✅ <strong>MDX Support</strong> - Enhanced markdown with component support</li>
-				<li>✅ <strong>Breadcrumb Navigation</strong> - Clear navigation paths</li>
-				<li>✅ <strong>Performance</strong> - Optimized images with Sharp</li>
-				<li>✅ <strong>Minimal Styling</strong> - Clean design based on Astro Starter Kit: Blog</li>
-				<li>✅ <strong>Atkinson Hyperlegible Fonts</strong> - Local variable fonts optimized for readability</li>
-				<li>✅ <strong>Accessible</strong> - WCAG 2.2 AA compliant with keyboard navigation and screen reader support</li>
-			</ul>
+
+			<section class="sb-showreel" aria-label="Showreel">
+			<h2 class="sb-showreelTitle">Showreel</h2>
+
+			<div class="sb-videoWrap">
+				<iframe
+				class="sb-video"
+				src="https://www.youtube.com/embed/nI0zW5LBLMM?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+				title="Steven Brennan - Showreel"
+				frameborder="1"
+				allow="autoplay; encrypted-media; picture-in-picture"
+				allowfullscreen
+				></iframe>
+			</div>
+			</section>
 
 			<p>Text Here</p>
 			</main>
@@ -156,6 +156,32 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				height: 160px;
 			}
 			}
+
+			.sb-showreel {
+			margin-top: 2rem;
+			}
+
+			.sb-showreelTitle {
+			margin: 0 0 0.75rem 0;
+			}
+
+			.sb-videoWrap {
+			position: relative;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			border-radius: 16px;
+			overflow: hidden;
+			border: 1px solid var(--border-color);
+			background: #000;
+			}
+
+			.sb-video {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			}
+
 			</style>
 
 		<Footer />
