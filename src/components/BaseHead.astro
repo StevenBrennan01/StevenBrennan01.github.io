@@ -2,18 +2,29 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import FallbackImage from '../assets/Greek_philosopher_busts.jpg';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
 
 interface Props {
-	title: string;
-	description: string;
-	image?: ImageMetadata;
+  title: string;
+  description: string;
+  /**
+   * Optional absolute or root-relative URL for OG image.
+   * Example: "/me.png" or "https://example.com/og.png"
+   */
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+const {
+  title,
+  description,
+  image = '/me.png',
+} = Astro.props;
+
+const ogImageURL = new URL(image, Astro.site);
 ---
 
 <!-- Global Metadata -->
