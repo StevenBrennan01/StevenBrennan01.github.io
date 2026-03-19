@@ -13,19 +13,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main">
-			<section class="hero" aria-labelledby="hero-title">
-				<header class="hero-title">
-				<img
-					class="hero-avatar"
-					src="/me.png"
-					alt="Portrait of me innit"
-					width="240"
-					height="240"
-				/>
-				<div>
-					<h1 class="hero-name">Steven Brennan</h1>
-					<h2 class="hero-role">Junior Gameplay Programmer</h2>
-				</div>
+			<div class="hero-title">
+			<img class="hero-avatar" src="/me.png" alt="Portrait of Steven Brennan" width="80" height="80" />
+			<div>
+				<h1 class="hero-name">Steven Brennan</h1>
+				<h2 class="hero-role">Junior Gameplay Programmer</h2>
+			</div>
 			</div>
 			<p>My name is <strong><a href="https://github.com/inakicalvo" target="_blank" rel="noopener noreferrer">Iñaki Calvo</a></strong> and I'm a techie with a Bachelor's Degree in Philosophy; that's why I named this Astro theme "Ataraxia" after the philosophical concept — learn more on <a href="https://en.wikipedia.org/wiki/Ataraxia" target="_blank" rel="noopener noreferrer">Wikipedia</a>.</p>
 			<p>
@@ -62,8 +55,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   }
 
   .hero-avatar {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
   }
 
