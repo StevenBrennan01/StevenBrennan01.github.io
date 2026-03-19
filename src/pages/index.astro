@@ -59,7 +59,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<li>✅ <strong>Accessible</strong> - WCAG 2.2 AA compliant with keyboard navigation and screen reader support</li>
 			</ul>
 
-			<p>I started building this theme for my personal blog but it's now open source. Customize it, make it yours, and start sharing your ideas with the world. Happy blogging! ✨</p>
+			<p>Text Here</p>
 			</main>
 
 			<style>
@@ -76,6 +76,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			border: 2px solid var(--border-color);
 			background: var(--content-bg, transparent);
 
+			width: min(1100px, calc(100vw - 2rem));
+			left: 50%;
+			transform: translateX(-50%);
 			min-height: 225px;
 			}
 
@@ -89,7 +92,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			object-fit: cover;
 
 			/* The “blurred background” effect */
-			filter: blur(8px) brightness(0.65) saturate(1.15);
+			filter: blur(5px) brightness(0.65) saturate(1.15);
 			transform: scale(1.08); /* avoids blurred edges showing */
 			}
 
