@@ -44,9 +44,132 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			and I'm currently exploring and learning within the <span class="sb-highlight">S&amp;box</span> engine (Facepunch) through personal projects.
 			</p>
 
-			<section class="sb-showreel" aria-label="Showreel">
+			<section class="sb-projectSection" aria-labelledby="games-title">
+				<h2 id="games-title" class="sb-sectionTitle">Games</h2>
 
-			<h1>Website currently under development, Projects will be available soon</h1>
+				<div class="sb-projectGrid">
+					<a class="sb-projectCard" href="/projects/tank-game" aria-label="View Tank Game project">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Tank Game title card" />
+						</div>
+					</a>
+
+					<a class="sb-projectCard" href="/projects/project-2" aria-label="View Project 2">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Project 2 title card" />
+						</div>
+					</a>
+
+					<a class="sb-projectCard" href="/projects/project-3" aria-label="View Project 3">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Project 3 title card" />
+						</div>
+					</a>
+
+					<a class="sb-projectCard" href="/projects/project-4" aria-label="View Project 4">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Project 4 title card" />
+						</div>
+					</a>
+
+					<a class="sb-projectCard" href="/projects/project-5" aria-label="View Project 5">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Project 5 title card" />
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<section class="sb-projectSection" aria-labelledby="tools-title">
+				<h2 id="tools-title" class="sb-sectionTitle">Tools</h2>
+
+				<div class="sb-projectGrid">
+					<a class="sb-projectCard" href="/projects/tool-1" aria-label="View Tool 1">
+						<video
+							class="sb-projectVideo"
+							poster="/poster.png"
+							autoplay
+							muted
+							loop
+							playsinline
+							preload="none"
+							aria-hidden="true"
+						>
+							<source src="/TankPlaceholder.mp4" type="video/mp4" />
+						</video>
+						<div class="sb-projectOverlay" aria-hidden="true"></div>
+						<div class="sb-projectContent">
+							<img class="sb-projectTitleImage" src="/poster.png" alt="Tool 1 title card" />
+						</div>
+					</a>
+				</div>
+			</section>
+
 			</main>
 
 			<style>
@@ -166,14 +289,105 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			}
 
 			.sb-highlight {
-			display: inline-block;
-			padding: 0.15rem 0.55rem;
-			margin: 0 0.15rem;
-			border-radius: 999px;
-			background: rgba(35, 55, 255, 0.12);
 			color: var(--accent);
-			font-weight: 700;
-			font-size: 0.95rem;
+			font-weight: 600;
+			}
+
+			.sb-projectSection {
+			margin-top: 3rem;
+			}
+
+			.sb-sectionTitle {
+				margin-bottom: 1rem;
+			}
+
+			.sb-projectGrid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.25rem;
+			}
+
+			.sb-projectCard {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				border-radius: 18px;
+				border: 2px solid var(--border-color);
+				background: var(--content-bg, transparent);
+				min-height: 260px;
+				width: 100%;
+				text-decoration: none;
+				transform: translateY(0) scale(1);
+				transition:
+					transform 0.25s ease,
+					box-shadow 0.25s ease,
+					border-color 0.25s ease;
+			}
+
+			.sb-projectCard:hover {
+				transform: translateY(-4px) scale(1.02);
+				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+				border-color: var(--accent);
+			}
+
+			.sb-projectCard:focus-visible {
+				outline: 3px solid var(--accent);
+				outline-offset: 4px;
+			}
+
+			.sb-projectVideo {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				filter: blur(5px) brightness(0.55) saturate(1.1);
+				transform: scale(1.06);
+			}
+
+			.sb-projectOverlay {
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, 0.62),
+					rgba(0, 0, 0, 0.25)
+				);
+			}
+
+			.sb-projectContent {
+				position: relative;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 260px;
+				padding: 1.5rem;
+			}
+
+			.sb-projectTitleImage {
+				display: block;
+				max-width: min(75%, 520px);
+				max-height: 140px;
+				width: auto;
+				height: auto;
+				object-fit: contain;
+			}
+
+			@media (max-width: 720px) {
+				.sb-projectCard {
+					min-height: 220px;
+				}
+
+				.sb-projectContent {
+					min-height: 220px;
+					padding: 1rem;
+				}
+
+				.sb-projectTitleImage {
+					max-width: 85%;
+					max-height: 110px;
+				}
 			}
 
 			</style>
