@@ -302,19 +302,30 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 			.sb-projectSection {
 			margin-top: 3rem;
-			}
+			width: min(1200px, calc(100vw - 2rem));
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 
-			.sb-sectionTitle {
-				margin-bottom: 1rem;
-			}
+		.sb-sectionTitle {
+			margin-bottom: 1rem;
+			text-align: center;
+		}
 
-			.sb-projectGrid {
+		.sb-projectGrid {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			gap: 1.25rem;
 		}
 
 		@media (max-width: 720px) {
+			.sb-projectSection {
+				width: 100%;
+				left: auto;
+				transform: none;
+			}
+
 			.sb-projectGrid {
 				grid-template-columns: 1fr;
 			}
