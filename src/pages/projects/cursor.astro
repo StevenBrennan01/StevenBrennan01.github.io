@@ -1,0 +1,266 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+const PAGE_TITLE = 'Cursor.Zip | Steven Brennan';
+const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programming work, technical highlights, and development experience.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<main id="main">
+			<section class="project-hero" aria-labelledby="project-title">
+				<video
+					class="project-hero-video"
+					poster="/Cursor_Poster.png"
+					autoplay
+					muted
+					loop
+					playsinline
+					preload="none"
+					aria-hidden="true"
+				>
+					<source src="/CursorGameplayLoop.mp4" type="video/mp4" />
+				</video>
+
+				<div class="project-hero-overlay" aria-hidden="true"></div>
+
+				<div class="project-hero-content">
+					<img
+						class="project-title-image"
+						src="/CursorTitleCard.png"
+						alt="Cursor title card"
+					/>
+				</div>
+			</section>
+
+			<section class="project-section">
+				<h2 class="sr-only" id="project-title">Cursor.Zip</h2>
+				<p class="project-summary">
+					Write your short summary here.
+				</p>
+			</section>
+
+			<section class="project-section" aria-labelledby="video-title">
+				<div class="project-video-wrap">
+					<iframe
+						class="project-video"
+						src="https://youtu.be/njbELxG8PwE?si=IUNLx-E4om86_rMb"
+						title="Cursor.Zip gameplay video"
+						allow="autoplay; encrypted-media; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</section>
+
+			<section class="project-section" aria-labelledby="skills-title">
+				<h2 id="skills-title">Skill Tags:</h2>
+				<div class="project-tags">
+					<span class="project-tag">Unity</span>
+					<span class="project-tag">C#</span>
+					<span class="project-tag">Gameplay Programming</span>
+					<span class="project-tag">UI</span>
+					<span class="project-tag">Systems Design</span>
+				</div>
+			</section>
+
+			<section class="project-section" aria-labelledby="overview-title">
+				<h2 id="overview-title">Overview</h2>
+				<p>
+					Write your project overview here.
+				</p>
+			</section>
+
+			<section class="project-section" aria-labelledby="worked-on-title">
+				<h2 id="worked-on-title">What I worked on:</h2>
+				<ul class="project-list">
+					<li>Write your first contribution here.</li>
+					<li>Write your second contribution here.</li>
+					<li>Write your third contribution here.</li>
+					<li>Write your fourth contribution here.</li>
+				</ul>
+			</section>
+
+			<section class="project-section" aria-labelledby="highlights-title">
+				<h2 id="highlights-title">Technical highlights / code snippets</h2>
+				<p>
+					Use this section to explain one or two technical systems you are proud of.
+				</p>
+
+				<pre><code>{`// Replace with a real Cursor.Zip code snippet
+public void ExampleFunction()
+{
+    Debug.Log("Cursor.Zip system example");
+}`}</code></pre>
+
+				<p>
+					Explain what this code does, what problem it solves, and why it demonstrates your technical knowledge.
+				</p>
+			</section>
+
+			<section class="project-section" aria-labelledby="challenges-title">
+				<h2 id="challenges-title">Challenges / learnings</h2>
+				<p>
+					Write about the challenges you faced during development and what you learned from them.
+				</p>
+			</section>
+
+			<section class="project-section" aria-labelledby="links-title">
+				<h2 id="links-title">Optional links:</h2>
+				<ul class="project-links">
+					<li>
+						<a href="https://steveybr.itch.io/cursorzip" target="_blank" rel="noopener noreferrer">
+							Itch.io build
+						</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.project-hero {
+		position: relative;
+		overflow: hidden;
+		margin-top: 1.25rem;
+		padding: 2rem 1.5rem;
+		border-radius: 18px;
+		border: 2px solid var(--border-color);
+		background: var(--content-bg, transparent);
+		width: min(1100px, calc(100vw - 2rem));
+		left: 50%;
+		transform: translateX(-50%);
+		min-height: 300px;
+	}
+
+	.project-hero-video {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: blur(5px) brightness(0.55) saturate(1.1);
+		transform: scale(1.08);
+	}
+
+	.project-hero-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 0.62),
+			rgba(0, 0, 0, 0.25)
+		);
+	}
+
+	.project-hero-content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 300px;
+		padding: 1.5rem;
+	}
+
+	.project-title-image {
+		display: block;
+		max-width: min(82%, 680px);
+		max-height: 200px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+	}
+
+	.project-section {
+		margin-top: 2rem;
+	}
+
+	.project-summary {
+		text-align: center;
+		max-width: 850px;
+		margin: 0 auto;
+		font-size: 1.1rem;
+	}
+
+	.project-video-wrap {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		border-radius: 16px;
+		overflow: hidden;
+		border: 1px solid var(--border-color);
+		background: #000;
+	}
+
+	.project-video {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+
+	.project-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.project-tag {
+		display: inline-block;
+		padding: 0.35rem 0.8rem;
+		border-radius: 999px;
+		background: rgba(35, 55, 255, 0.12);
+		color: var(--accent);
+		font-weight: 700;
+		font-size: 0.95rem;
+		border: 1px solid rgba(35, 55, 255, 0.18);
+	}
+
+	.project-list,
+	.project-links {
+		padding-left: 1.25rem;
+	}
+
+	pre {
+		padding: 1rem 1.25rem;
+		border-radius: 12px;
+		overflow-x: auto;
+		font-size: 0.85rem;
+		line-height: 1.5;
+		border: 2px solid var(--border-color);
+		background: transparent;
+	}
+
+	pre code {
+		font-size: inherit;
+	}
+
+	@media (max-width: 720px) {
+		.project-hero {
+			padding: 1.25rem 1rem;
+			min-height: 220px;
+		}
+
+		.project-hero-content {
+			min-height: 220px;
+			padding: 1rem;
+		}
+
+		.project-title-image {
+			max-width: 90%;
+			max-height: 120px;
+		}
+	}
+</style>
