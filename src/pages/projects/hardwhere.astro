@@ -67,6 +67,7 @@ const PAGE_DESCRIPTION = 'HardWhere project page showcasing gameplay programming
 					<span class="project-tag">C#</span>
 					<span class="project-tag">Gameplay Programming</span>
 					<span class="project-tag">Systems Design</span>
+					<span class="project-tag">Level Design</span>
 					<span class="project-tag">UI</span>
 				</div>
 			</section>
@@ -93,15 +94,37 @@ const PAGE_DESCRIPTION = 'HardWhere project page showcasing gameplay programming
 					Use this section to explain one or two technical systems you are proud of.
 				</p>
 
-				<pre><code>{`// Replace with a real HardWhere code snippet
-public void ExampleFunction()
-{
-    Debug.Log("HardWhere system example");
-}`}</code></pre>
+				<pre><code>{`AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        while (!loadOp.isDone)
+        {
+            yield return null;
+        }
 
-				<p>
-					Explain what this code does, what problem it solves, and why it demonstrates your technical knowledge.
-				</p>
+        Scene loadedScene = SceneManager.GetSceneByName(sceneName);
+        if (loadedScene.IsValid() && loadedScene.isLoaded)
+        {
+            SceneManager.SetActiveScene(loadedScene);
+            currentLevelSceneName = sceneName;
+
+            if(loadedScene.name != levelSceneNames[0] && currentLevelIndex != introDuplicateSceneIndex)
+            {
+                batteryManager.SetBatteryFull();
+                signalManager.EnableSignalChecks();
+            }
+
+            if(loadedScene.name == levelSceneNames[0] && currentLevelIndex == introDuplicateSceneIndex)
+            {
+                signalManager.DisableSignalChecks();
+            }
+        }
+        else
+        {
+            Debug.LogError($"LevelLoadManager: Failed to load scene '{sceneName}'.");
+        }`}</code></pre>
+
+			<p>
+				Explain what this code does, what problem it solves, and why it demonstrates your technical knowledge.
+			</p>
 			</section>
 
 			<section class="project-section" aria-labelledby="challenges-title">
