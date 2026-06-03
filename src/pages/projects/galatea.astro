@@ -3,8 +3,8 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 
-const PAGE_TITLE = 'Cursor.Zip | Steven Brennan';
-const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programming work, technical highlights, and development experience.';
+const PAGE_TITLE = 'Galatea | Steven Brennan';
+const PAGE_DESCRIPTION = 'Galatea project page showcasing gameplay programming work, technical highlights, and development experience.';
 ---
 
 <!doctype html>
@@ -19,7 +19,7 @@ const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programmin
 			<section class="project-hero" aria-labelledby="project-title">
 				<video
 					class="project-hero-video"
-					poster="/Cursor_Poster.png"
+					poster="/Galatea_Poster.png"
 					autoplay
 					muted
 					loop
@@ -27,7 +27,7 @@ const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programmin
 					preload="none"
 					aria-hidden="true"
 				>
-					<source src="/CursorGameplayLoop.mp4" type="video/mp4" />
+					<source src="/GalateaGameplayLoop.mp4" type="video/mp4" />
 				</video>
 
 				<div class="project-hero-overlay" aria-hidden="true"></div>
@@ -35,26 +35,26 @@ const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programmin
 				<div class="project-hero-content">
 					<img
 						class="project-title-image"
-						src="/CursorTitleCard.png"
-						alt="Cursor title card"
+						src="/GalateaTitleCard.png"
+						alt="Galatea title card"
 					/>
 				</div>
 			</section>
 
 			<section class="project-section">
-				<h2 class="sr-only" id="project-title">Cursor.Zip</h2>
+				<h2 class="sr-only" id="project-title">Galatea</h2>
 				<p class="project-summary">
-					You are Cursor, a wallrunning, grappling and ball transforming dude running through 
-					a Techno-Wave world at high-octane speeds! You must find your Wife...
+					Entry for the 2024 GMTK Game-Jam for the "Built to Scale" theme.
 				</p>
 			</section>
 
 			<section class="project-section" aria-labelledby="video-title">
+				<h2 id="video-title">Video</h2>
 				<div class="project-video-wrap">
 					<iframe
 						class="project-video"
-						src="https://www.youtube-nocookie.com/embed/njbELxG8PwE?autoplay=1&mute=1&rel=0&playsinline=1"
-						title="Cursor.Zip gameplay video"
+						src="https://www.youtube-nocookie.com/embed/3v6ngkZX2P4?autoplay=1&mute=1&rel=0&playsinline=1"
+						title="Galatea gameplay video"
 						allow="autoplay; encrypted-media; picture-in-picture"
 						allowfullscreen
 					></iframe>
@@ -64,50 +64,38 @@ const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programmin
 			<section class="project-section" aria-labelledby="skills-title">
 				<h2 id="skills-title">Skills Used:</h2>
 				<div class="project-tags">
-					<span class="project-tag">Tech-Lead</span>
 					<span class="project-tag">Unity</span>
 					<span class="project-tag">C#</span>
 					<span class="project-tag">Gameplay Programming</span>
-					<span class="project-tag">Game & Systems Design</span>
 				</div>
 			</section>
 
 			<section class="project-section" aria-labelledby="overview-title">
-				<h2 id="overview-title">Overview:</h2>
-				<p>
-					Placing 10th out of 35 projects, Cursor.Zip was a collaborative university module with a team size of about 20 odd. 
-					I took on the role of Tech Lead, assigning tasks, communicating with other disciplines and
-					most importantly helping anyone out who wasn't as familiar with the Unity workflow, alongside 
-					getting stuck in and developing many of the systems also.
-				</p>
+				<h2 id="overview-title">Overview</h2>
+				<p>Write your project overview here.</p>
 			</section>
 
 			<section class="project-section" aria-labelledby="worked-on-title">
 				<h2 id="worked-on-title">What I worked on:</h2>
 				<ul class="project-list">
-					<li>Overseeing the Tech Team and delegating tasks</li>
-					<li>Player Controller and Physics</li>
-					<li>Player State-Machine</li>
-					<li>Camera controller and transitions</li>
-					<li>Working and assisting on most other mechanic implementations</li>
+					<li>UI Programming</li>
+					<li>Prototyping gameplay ideas</li>
+					<li>Picking my Lead Programmers Brain</li>
 				</ul>
 			</section>
 
 			<section class="project-section" aria-labelledby="challenges-title">
 				<h2 id="challenges-title">What I learnt:</h2>
-				<p>
-					I was initially not looking to get the Tech-Lead role, but was rather given it from a supervising lecturer.
-					Despite this, over time, I felt a lot more confident in the role, 
-					it taught me a lot about leading, helping and working with others within a Tech-Team and I was glad that
-					I got that experience.
-				</p>
+				<p>A lot, and it was quite overwhelming. My Lead Programmer knew a lot more than me at the time.
+				It was a huge learning experience for me and I learnt a lot of things from this project such as how to use
+				Events, about Lambda Expressions, Ternary Operators and many other clean code and development practices.</p>
 			</section>
 
 			<section class="project-section" aria-labelledby="links-title">
 				<h2 id="links-title">Game Build:</h2>
 				<ul class="project-links">
 					<li>
-						<a href="https://steveybr.itch.io/cursorzip" target="_blank" rel="noopener noreferrer">
+						<a href="https://pehre.itch.io/galatea" target="_blank" rel="noopener noreferrer">
 							Itch.io build
 						</a>
 					</li>
@@ -147,11 +135,7 @@ const PAGE_DESCRIPTION = 'Cursor.Zip project page showcasing gameplay programmin
 	.project-hero-overlay {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			90deg,
-			rgba(0, 0, 0, 0.62),
-			rgba(0, 0, 0, 0.25)
-		);
+		background: linear-gradient(90deg, rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.25));
 	}
 
 	.project-hero-content {
