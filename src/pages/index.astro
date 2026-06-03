@@ -309,10 +309,30 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			}
 
 			.sb-projectGrid {
-				display: grid;
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.25rem;
+		}
+
+		@media (max-width: 720px) {
+			.sb-projectGrid {
 				grid-template-columns: 1fr;
-				gap: 1.25rem;
 			}
+
+			.sb-projectCard {
+				min-height: 220px;
+			}
+
+			.sb-projectContent {
+				min-height: 220px;
+				padding: 1rem;
+			}
+
+			.sb-projectTitleImage {
+				max-width: 85%;
+				max-height: 110px;
+			}
+		}
 
 			.sb-projectCard {
 				position: relative;
