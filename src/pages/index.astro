@@ -39,14 +39,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</section>
 
 			<p class="sb-intro"> 
-			Hi, I'm <strong><a href="https://www.linkedin.com/in/steven-brennan-37b473234/" target="_blank" rel="noopener noreferrer">Steve</a></strong>, a recently graduated Games Programmer from the University of Staffordshire for Games Programming and Design. 
+			Hi, I'm <strong><a href="https://www.linkedin.com/in/steven-brennan-37b473234/" target="_blank" rel="noopener noreferrer">Steve</a></strong>, 
+			a recently graduated Games Programmer from the University of Staffordshire for Games Programming and Design. 
 			My expertise includes working primarily within the <span class="sb-highlight">Unity</span> engine using <span class="sb-highlight">C#</span>, alongside 
 			<span class="sb-highlight">Unreal</span> (Blueprints), <span class="sb-highlight">C++</span> using the <span class="sb-highlight">SFML</span> library 
 			and I'm currently exploring and learning within the <span class="sb-highlight">S&amp;box</span> engine (Facepunch) through personal projects.
 			</p>
 
 			<section class="sb-projectSection" aria-labelledby="games-title">
-				<h2 id="games-title" class="sb-sectionTitle">Game Projects</h2>
+				<h2 id="games-title" class="sb-sectionTitle">
+					<img class="sb-sectionIcon" src="/gamepad.png" alt="" aria-hidden="true" />
+					<span>Game Projects</span>
+				</h2>
 
 				<div class="sb-projectGrid">
 					<a class="sb-projectCard" href="/projects/hardwhere" aria-label="View HardWhere">
@@ -147,7 +151,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</section>
 
 			<section class="sb-projectSection" aria-labelledby="tools-title">
-				<h2 id="tools-title" class="sb-sectionTitle">Development Tools</h2>
+				<h2 id="tools-title" class="sb-sectionTitle">
+					<img class="sb-sectionIcon" src="/hammer.png" alt="" aria-hidden="true" />
+					<span>Development Tools</span>
+				</h2>	
 
 				<div class="sb-projectGrid">
 					<a class="sb-projectCard" href="/projects/kanbantool" aria-label="Kanban Tool">
@@ -309,8 +316,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		}
 
 		.sb-sectionTitle {
-			margin-bottom: 1rem;
-			text-align: center;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.6rem;
+		}
+
+		.sb-sectionIcon {
+			width: 32px;
+			height: 32px;
+			object-fit: contain;
+			flex: 0 0 auto;
 		}
 
 		.sb-projectGrid {
