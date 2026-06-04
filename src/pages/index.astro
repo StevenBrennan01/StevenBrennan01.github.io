@@ -54,7 +54,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				</h2>
 
 				<div class="sb-projectGrid">
-					<a class="sb-projectCard" href="/projects/hardwhere" aria-label="View HardWhere">
+					<a class="sb-projectCard sb-projectCard-featured" href="/projects/hardwhere" aria-label="View HardWhere">
 						<video
 							class="sb-projectVideo"
 							poster="/HardWhere_Poster.png"
@@ -364,6 +364,30 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			}
 		}
 
+			.sb-sectionTitle {
+			margin-bottom: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.6rem;
+			color: var(--accent);
+			animation: sb-titleGlow 4s ease-in-out infinite;
+		}
+
+		@keyframes sb-titleGlow {
+			0%,
+			100% {
+				text-shadow:
+					0 0 6px rgba(45, 143, 255, 0.18),
+					0 0 12px rgba(45, 143, 255, 0.08);
+			}
+			50% {
+				text-shadow:
+					0 0 10px rgba(35, 55, 255, 0.28),
+					0 0 20px rgba(35, 55, 255, 0.14);
+				}
+			}
+
 			.sb-projectCard {
 				position: relative;
 				display: block;
@@ -385,6 +409,22 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				transform: translateY(-4px) scale(1.02);
 				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 				border-color: var(--accent);
+			}
+
+				.sb-projectCard-featured {
+				border-color: rgba(45, 143, 255, 0.65);
+				box-shadow:
+				0 0 0 1px rgba(45, 143, 255, 0.18),
+				0 0 18px rgba(45, 143, 255, 0.18),
+				0 0 36px rgba(45, 143, 255, 0.10);
+			}
+
+			.sb-projectCard-featured:hover {
+			border-color: rgba(45, 143, 255, 0.9);
+			box-shadow:
+			0 0 0 1px rgba(45, 143, 255, 0.22),
+			0 0 24px rgba(45, 143, 255, 0.22),
+			0 0 48px rgba(45, 143, 255, 0.14);
 			}
 
 			.sb-projectCard:focus-visible {
