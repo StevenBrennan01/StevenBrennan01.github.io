@@ -39,8 +39,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			</section>
 
 			<p class="sb-intro"> 
-			Hi, I'm <strong><a href="https://www.linkedin.com/in/steven-brennan-37b473234/" target="_blank" rel="noopener noreferrer">Steve</a></strong>, 
-			a final year Games Programmer at the University of Staffordshire for Games Programming and Design. 
+			I'm <strong><a href="https://www.linkedin.com/in/steven-brennan-37b473234/" target="_blank" rel="noopener noreferrer">Steve</a></strong>, 
+			a recently graduated Games Programmer from the University of Staffordshire for Games Programming and Design. 
 			My expertise includes working primarily within the <span class="sb-highlight">Unity</span> engine using <span class="sb-highlight">C#</span>, alongside 
 			<span class="sb-highlight">Unreal</span> (Blueprints), <span class="sb-highlight">C++</span> using the <span class="sb-highlight">SFML</span> library 
 			and I'm currently exploring and learning within the <span class="sb-highlight">S&amp;box</span> engine (Facepunch) through personal projects.
@@ -71,6 +71,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/HardWhereTitleCard.png" alt="HardWhere title card" />
 						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">Unity</span>
+							<span class="sb-projectMiniTag">C#</span>
+						</div>
 					</a>
 
 					<a class="sb-projectCard" href="/projects/cursor" aria-label="View Cursor.Zip">
@@ -89,6 +94,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectOverlay" aria-hidden="true"></div>
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/CursorTitleCard.png" alt="Cursor title card" />
+						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">Unity</span>
+							<span class="sb-projectMiniTag">C#</span>
 						</div>
 					</a>
 
@@ -109,6 +119,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/GalateaTitleCard.png" alt="Galatea title card" />
 						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">Unity</span>
+							<span class="sb-projectMiniTag">C#</span>
+						</div>
 					</a>
 
 					<a class="sb-projectCard" href="/projects/tankroyale" aria-label="View Tank Royale">
@@ -128,6 +143,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/TankTitleCard.png" alt="TankRoyale title card" />
 						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">Unity</span>
+							<span class="sb-projectMiniTag">C#</span>
+						</div>
 					</a>
 
 					<a class="sb-projectCard" href="/projects/frogger" aria-label="View ModernisedFrogger">
@@ -146,6 +166,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectOverlay" aria-hidden="true"></div>
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/FroggerTitleCard.png" alt="Frogger title card" />
+						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">C++</span>
+							<span class="sb-projectMiniTag">SFML</span>
 						</div>
 					</a>
 				</div>
@@ -175,6 +200,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 						<div class="sb-projectOverlay" aria-hidden="true"></div>
 						<div class="sb-projectContent">
 							<img class="sb-projectTitleImage" src="/KanbanTitleCard.png" alt="KanbanTool title card" />
+						</div>
+
+						<div class="sb-projectMiniTags" aria-hidden="true">
+							<span class="sb-projectMiniTag">Unity</span>
+							<span class="sb-projectMiniTag">C#</span>
 						</div>
 					</a>
 				</div>
@@ -383,6 +413,33 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				max-width: 85%;
 				max-height: 110px;
 			}
+		}
+
+			.sb-projectMiniTags {
+			position: absolute;
+			left: 50%;
+			bottom: 0.9rem;
+			transform: translateX(-50%);
+			z-index: 2;
+			display: flex;
+			gap: 0.5rem;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.sb-projectMiniTag {
+			display: inline-block;
+			padding: 0.22rem 0.65rem;
+			border-radius: 999px;
+			font-size: 0.78rem;
+			font-weight: 700;
+			line-height: 1;
+			color: #ffffff;
+			background: rgba(20, 25, 35, 0.72);
+			border: 1px solid rgba(255, 255, 255, 0.14);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+			white-space: nowrap;
 		}
 
 		.sb-sectionTitle 
