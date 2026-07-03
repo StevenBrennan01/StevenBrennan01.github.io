@@ -25,12 +25,6 @@
 	--code-bg: rgb(var(--gray-light));
 }
 
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* Dark theme variables */
 [data-theme="dark"] {
 	--accent: #2d8fff;
